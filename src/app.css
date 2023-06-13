@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Regular.ttf");
+}
+
+@layer components { 
+  .nav {
+    @apply sticky left-0 top-0 md:w-max md:h-[100vh] grid grid-rows-[auto_1fr_auto] p-3 bg-white
+  }
+
+  .nav__expanded {
+    @apply nav w-full md:max-w-md
+  }
+  .nav-option {
+    @apply h-max flex items-center rounded-md
+  }
+
+  .nav-option__active {
+    @apply nav-option bg-lavender-100
+  }
+
+  .nav-option-icon {
+    @apply h-max p-4 text-lavender-400
+  }
+
+  .nav-option-text {
+    @apply hidden text-lavender-400
+  }
+
+  .nav__expanded .nav-option-text {
+    @apply block
+  }
+}
+
+body {
+  @apply h-[300vh] flex flex-col md:flex-row font-poppins bg-lavender-100
+}
